@@ -1,0 +1,12 @@
+[package]
+name = "furnicad-geom"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+description = "Low-level 2D/3D math for FurniCAD: points, vectors, contours, arcs, tessellation, offsets."
+
+[dependencies]
+glam = { workspace = true }
+serde = { workspace = true }
+furnicad-core = { workspace = true }
