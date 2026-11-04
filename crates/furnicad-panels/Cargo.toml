@@ -1,0 +1,15 @@
+[package]
+name = "furnicad-panels"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+description = "Panel technology layer: contours, thickness, edge bands, cutouts, grooves, bent panels."
+
+[dependencies]
+glam = { workspace = true }
+serde = { workspace = true }
+furnicad-core = { workspace = true }
+furnicad-geom = { workspace = true }
+furnicad-kernel = { workspace = true }
+thiserror = { workspace = true }
