@@ -1,0 +1,15 @@
+[package]
+name = "furnicad-core"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+description = "Core types for the FurniCAD furniture modeling application: document, entities, ids, expressions, units, selection."
+
+[dependencies]
+glam = { workspace = true }
+serde = { workspace = true }
+thiserror = { workspace = true }
+
+[dev-dependencies]
+serde_json = { workspace = true }

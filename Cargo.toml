@@ -1,0 +1,57 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/furnicad-core",
+    "crates/furnicad-geom",
+    "crates/furnicad-kernel",
+    "crates/furnicad-history",
+    "crates/furnicad-panels",
+    "crates/furnicad-hardware",
+    "crates/furnicad-render",
+    "crates/furnicad-io",
+    "crates/furnicad-app",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+authors = ["FurniCAD Team"]
+repository = "https://example.com/furnicad"
+
+[workspace.dependencies]
+# Internal crates
+furnicad-core = { path = "crates/furnicad-core" }
+furnicad-geom = { path = "crates/furnicad-geom" }
+furnicad-kernel = { path = "crates/furnicad-kernel" }
+furnicad-history = { path = "crates/furnicad-history" }
+furnicad-panels = { path = "crates/furnicad-panels" }
+furnicad-hardware = { path = "crates/furnicad-hardware" }
+furnicad-render = { path = "crates/furnicad-render" }
+furnicad-io = { path = "crates/furnicad-io" }
+
+# Math & geometry
+glam = { version = "0.29", features = ["serde"] }
+nalgebra = "0.33"
+
+# Serialization
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+ron = "0.8"
+postcard = { version = "1", features = ["alloc"] }
+
+# Utilities
+thiserror = "2"
+anyhow = "1"
+slotmap = { version = "1", features = ["serde"] }
+petgraph = "0.6"
+rayon = "1"
+log = "0.4"
+env_logger = "0.11"
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+
+[profile.dev]
+opt-level = 1

@@ -1,0 +1,16 @@
+[package]
+name = "furnicad-io"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+description = "Import/export services: project save/load (JSON), OBJ/STL export, cutting lists and drilling maps."
+
+[dependencies]
+serde = { workspace = true }
+serde_json = { workspace = true }
+furnicad-core = { workspace = true }
+furnicad-geom = { workspace = true }
+furnicad-panels = { workspace = true }
+furnicad-hardware = { workspace = true }
+thiserror = { workspace = true }
